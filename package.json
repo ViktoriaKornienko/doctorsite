@@ -1,0 +1,19 @@
+{
+  "name": "doctorsite",
+  "version": "1.0.0",
+  "description": "doctor-lesson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktoriaKornienko/doctorsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktoriaKornienko/doctorsite/issues"
+  },
+  "homepage": "https://github.com/ViktoriaKornienko/doctorsite#readme"
+}
