@@ -23,7 +23,7 @@ ul {
 }
 
 .section-title {
-	font-size: 20px;
+	font-size: 40px;
 	padding: 20px 0;
 
 	&.centered {
@@ -77,20 +77,40 @@ ul {
 		}
 
 		.header-promo {
-			height: 70%;
-			height: 400px;
+			height: 600px;
 			position: relative;
 			 .row{
+				 height:100%;
 				 .col-md-12{
-					 .section-title{
-						 h1{
-							 font-size: 150%;
-							 line-height:1.5;
-							 margin-bottom: 30px;
-						 }
-						 p{
-							 line-height: 2;
-						 }
+					 	 .name-section{
+             padding-bottom:20px;
+						 line-height: 1.7;
+						 color: #000;
+						 font-family: Montserrat-SemiBold;
+							 .surname {
+								 padding: 0;
+								 padding-top: 20px;
+								 font-size: 50px;
+							 }
+							 .name{
+								 padding-bottom: 15px;
+								 font-size: 50px;
+									 .name::after{
+									 content: "";
+									 width: 40px;
+									 border-bottom: 3px solid #101010;
+									 position: absolute;
+									 bottom: 0;
+									 left: 0;
+									 color: black;
+								}
+							 }
+
+							 .description{
+								 p{	line-height: 2;}
+								 padding-left:15px;
+						    }
+						   }
 						 a {
 			 				text-align: center;
 			 				border: 2px solid #01a3a4;
@@ -101,8 +121,8 @@ ul {
 			 				color: #01a3a4;
 							position: relative;
 							top:50px;
-					   }
 		 			  }
+
 				   }
 			    }
 		     }
@@ -113,38 +133,37 @@ ul {
 	background-color: #01a3a4;
 	display: block;
 	height: 100px;
-
-	.input-block {
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-
-		p {
-			color: white;
-			text-align: center;
-			padding: 10px;
-			margin-bottom: 5px;
-		}
-
-		input {
-			display: inline-block;
-			padding-right: 50px;
-			margin-right: 10px;
-			box-sizing: border-box;
-			line-height: 1.7;
-			font-size: 13;
+		.container{
+			height:100%;
+			p {
+				color: white;
+				text-align: center;
+				padding: 10px;
+				margin-bottom: 5px;
 			}
-
-		a {
-			color: black;
-			border: 2px solid white;
-			border-radius: 50px;
-			padding: 10px;
-			text-decoration: none;
-			background-color: white;
+		.row{
+			.col md-3 xs-12{
+				a{
+					color: black;
+					border: 2px solid white;
+					border-radius: 50px;
+					padding: 10px;
+					text-decoration: none;
+					background-color: white;
+				 }
+			 input {
+					display: inline-block;
+					padding-right: 50px;
+					margin-right: 10px;
+					box-sizing: border-box;
+					line-height: 1.7;
+					font-size: 13;
+					}
+				}
+			}
 		}
-	}
-}
+  }
+
 
 .maininfo {
 	background-color: #c8d6e5;
@@ -152,67 +171,41 @@ ul {
 	display: block;
 	height: 500px;
 
-	.left-bar {
-		float: left;
-		width: 50%;
-	}
-
-	.right-bar {
-		float: right;
-		width: 50%;
-		margin-right: 300px;
-
-		table {
-			display: table;
-			margin: 50px;
-
-
-
-			tr {
-				td {
-					background-color: white;
-					border: 1px solid black;
-					height: 70px;
-					width: 70px;
-					margin: 50px;
-					padding:30px;
-
-					.only {
-						height: 50px;
-						width: 50px;
-						color: red;
-					}
-
-					.only2 {
-						height: 70px;
-						width: 50px;
+		.container{
+			.row{
+				.col-md-6{
+					.left-bar {
+						float: left;
+						width: 50%;
 					}
 				}
-			}
-		}
-	}
-}
+			.col-md-6{
+				.right-bar {
+					float: right;
+					width: 50%;
+					margin-right: 300px;
+					 a{
+             display: block;
+					 }
+			    }
+         }
+  	    }
+       }
+      }
 .container{
 	.service-bar {
 		display: block;
 		width: 100%;
 		height: 400px;
 		background-color: white;
+		position:relative;
 
-		h1 {
+     select{
+			 position: absolute;
+			 right:300px;
+			 top: 20px;
+		 }
 
-		}
-
-		p {
-		position: relative;
-    top: -41px;
-    left: 1000px;
-		box-sizing: border-box;
-			a{
-				border:1px solid
-				padding:5px;
-				}
-		  }
 
 		ul {
 			overflow: auto;
@@ -234,10 +227,53 @@ ul {
 }
 
 .presentation-bar {
-	height: 300px;
 	display: block;
 	background-color: #c8d6e5;
-}
+
+	.result-box{
+		height:400px;
+		width:300px;
+		position: relative;
+		margin: 0 auto;
+		padding-bottom: 30px;
+
+		.forward-lay {
+			height:100%;
+			position: absolute;
+			top:0;
+			left: 0;
+			bottom: 0;
+			right: 50%;
+			overflow: hidden;
+			z-index: 6;
+
+			.avatar {
+				position: absolute;
+				width: 300px;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				z-index: 5;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.background-lay {
+			height:100%;
+			width:100%;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.pointer {}
+	 }
+ }
+
+
 
 .infobar {
 	display: block;
@@ -253,11 +289,17 @@ ul {
 						float: left;
 						display: block;
 						height: auto;
-							p{
-								border-top: 1px solid;
-
-								a{
-
+						 .left-box{
+							 a{
+						    }
+								::after{
+								content: "";
+								width: 40px;
+								border-bottom: 3px solid black;
+								position: absolute;
+								bottom: 0;
+								left: 0;
+							    }
 								}
 							}
 						}
@@ -266,36 +308,79 @@ ul {
 
 		 	.col-md-6{
 				.right-infobar {
-				   float: right;
-					 margin-right:100px;
-					 border-top: 1px solid;
-					 padding:10px;
-					 border-color: #01a3a4;
-					 border-width: medium;
+						 display: block;
+						 height: auto;
+					   float: right;
+						 margin-right:100px;
+						 border-top: 1px solid;
+						 padding:10px;
+						 border-color: #01a3a4;
+						 border-width: medium;
 					}
 	      }
     	}
-		}
+
 
 .footer {
 	display: block;
 	background-color: #c8d6e5;
-	height: 300px;
-		.row{
-	  	.col-md-6{
-				.footer-left{
-					float:left;
-					.section-title centered{}
-						p{
-							line-height: 2;
-						}
-
-				}
-		  }
-			.col-md-6{
-				.footer-right{
-					float:right;
-				}
-			}
+  padding:50px 0;
+	padding-bottom: 60px;
+	 .container{
+		 margin:0 auto;
+		 padding:0 15px;
+		 box-sizing: border-box;
+			.row{
+				max-width: 100%;
+		  	.col-md-6{
+					width:50%;
+					.footer-left{
+						margin:0px;
+						float:left;
+						display:block;
+						height:auto;
+						padding:0;
+							p{
+								line-height: 2;
+								font-size: 20px;
+							}
+	 					}
+			  	}
+				.col-md-6{
+					.footer-right{
+						float:right;
+						display:block;
+						height: auto;
+			 				form{
+								margin-top:0px;
+							  font-size: 13px;
+								display:block;
+								 .input-group{
+									 margin-bottom: 20px;
+									 	input{
+											background-color: #c8d6e5;
+											color: #c8d6e5;
+										 	width:373px;
+											display: block;
+											padding: 10px 14px;
+									    box-sizing: border-box;
+											font-size: 13px;
+									    text-decoration: none;
+									    list-style: none;
+								     }
+										label{
+											display: block;
+									    font-family: Montserrat-regular;
+									    color: #999;
+									    margin-bottom: 15px;
+										}
+							    }
+										button{
+											width: 379px;
+								}
+							}
+				    }
+          }
+			  }
 	   }
 	 }
